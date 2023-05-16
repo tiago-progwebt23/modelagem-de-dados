@@ -102,5 +102,7 @@ UPDATE produtos
 
 ```sql
 DELETE FROM produtos WHERE id = 3;
-DELETE FROM fabricantes WHERE id = 1; -- ERRO!
+
+-- ERRO (não da pra apagar pois há produtos deste fabricante)
+DELETE FROM fabricantes WHERE id = 1; 
 ```
