@@ -42,3 +42,28 @@ VALUES
 
 ('Ultrabook', 'Equipamento com processador AMD Ryzen, 12 GB de RAM.', 2);
 ```
+
+## SELECT
+
+### Ler dados da tabela Produtos
+
+```sql
+SELECT * FROM produtos;
+SELECT nome FROM produtos;
+SELECT nome, descricao FROM produtos;
+SELECT descricao, nome FROM produtos;
+
+-- COMENTÁRIOS SQL
+-- Exercício: trazer o nome dos produtos apenas da Apple 
+-- Dica: use o comando WHERE (ONDE) para indicar a condição
+SELECT nome FROM produtos WHERE fabricante_id = 4;
+
+-- OPERADOR DIFERENTE: != OU <> 
+SELECT nome FROM produtos WHERE fabricante_id != 4;
+SELECT nome FROM produtos WHERE fabricante_id <> 4;
+
+-- OPERADOR OU: OR
+SELECT nome, descricao FROM produtos 
+WHERE fabricante_id = 2 OR fabricante_id = 3;
+```
+
